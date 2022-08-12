@@ -2,7 +2,8 @@
     /* tag selestor: */
     .easeExempleSelector,
     .nestedSelectors,
-    .secondExemple{
+    .secondExemple,
+    .musliselector{
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -43,3 +44,17 @@
             color: yellowgreen;
         }
 
+    /* musliselector */
+        /*choose .bold in .hardSelector */ 
+        .musliselector .bold{
+            font-weight: bold;
+        }
+        /*choose .italic in .hardSelector */ 
+        .musliselector .italic{
+            font-style: italic;
+        }
+        /*choose tag witn style .bold AND .italic */ 
+        .musliselector .bold.italic{
+            text-decoration:underline;
+            color: red;
+        }
