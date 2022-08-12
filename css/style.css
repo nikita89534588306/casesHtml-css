@@ -1,15 +1,17 @@
 /* selectors */
     /* tag selestor: */
-    /* ease exemples selector */
-        .easeExempleSelector{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 0 60px;
-            border: 1px solid black;
-            margin-top: 15px;
+    .easeExempleSelector,
+    .nestedSelectors,
+    .secondExemple{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 60px;
+        border: 1px solid black;
+        margin-top: 15px;
 
-        }
+    }
+    /* ease exemples selector */
         p{
             color: red;
         }
@@ -23,4 +25,15 @@
         #styleForDiv{
             color: blueviolet;
         }
-        
+    
+    /* exemples nested selectors */
+        /*get all items in .nestedSelectors*/
+        .nestedSelectors * {
+            border: 1px solid greenyellow;
+        }
+
+        /* get all <h3> in .nestedSelectors*/
+        .nestedSelectors h3{
+            background-color: blanchedalmond;
+        }
+
