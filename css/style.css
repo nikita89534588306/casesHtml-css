@@ -1,17 +1,31 @@
 /* selectors */
-    /* tag selestor: */
+    .headerExemple{
+        margin: 5px 0px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    /* tag selestor:*/
+    .inlineAndEmbedded, 
     .easeExempleSelector,
     .nestedSelectors,
     .secondExemple,
     .musliselector,
-    .childSelector{
+    .childSelector,
+    .atributSelect{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        padding: 0 60px;
-        border: 1px solid black;
-        margin-top: 15px;
+        padding: 0 60px 10px 60px;
 
+
+    }
+    .exemple{
+        border: 1px solid black; 
+        margin: 10px;
+    }
+
+    .exemple .headerExemple{
+        text-align: center;
     }
     /* ease exemples selector */
         p{
@@ -60,7 +74,18 @@
             color: red;
         }
 
-        /* childSelec */
+    /* attribute select */
+        /*select all buttons that have the attribute - type*/
+        button[type]{
+            color:orange;
+            background-color: black;
+            border: 1px solid red;
+        }
+
+        /*select all buttons that have a content attribute - placeholder, value - satisfaction*/
+        input[placeholder="satisfaction"]{
+            background-color: deeppink;
+        }
 
 
 
