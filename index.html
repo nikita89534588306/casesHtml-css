@@ -6,9 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".css/sytle.css">
     <title>Html+css</title>
+    <!-- example css inside html -->
+    <style> 
+        .testSpan{
+            display: flex;
+            color: blue;
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            align-items: center;
+
+        }
+    </style>
 </head>
 <body>
     <!-- inline style-->
-    <div style="background-color: aqua; width: 100px; height: 100px;">Hi</div>
+    <div style="background-color: aqua;
+                width: 100px; 
+                height: 100px; 
+                float: left;
+                margin-right: 10px;"> Hi </div>
+
+    <!-- example css inside html -->
+    <div class="testSpan">My name Giovani Georgio</div>
+
 </body>
 </html>
