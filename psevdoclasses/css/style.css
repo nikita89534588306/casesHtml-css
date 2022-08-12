@@ -9,17 +9,41 @@
 }
 
 /* exemple fist-of-type and last-of-type */
-    #block p {
+    #block *{
+        border: 1px solid black;
         display: inline-block;
         margin: 15px;
-        border: 1px solid black;
         padding: 5px;
         font-size: 14px;
     }
 
+    /* find first element <p> in #block*/
     #block p:first-of-type{
         color: blue;
     }
+
+    /* find last element <p> in #block*/
     #block p:last-of-type{
         color: red;
     }
+
+    /* find first element <span> in #block*/
+        #block span:last-of-type{
+        color:blueviolet;
+    }
+
+    /* find last element <span> in #block*/
+    #block span:first-of-type{
+        color:aqua;
+    }
+
+/* exemple first-child */
+    /* find first child */
+    #block :first-child{
+        background-color:beige;
+    } 
+    /* find last child */
+    #block :last-child{
+        background-color:burlywood;
+    } 
+    
