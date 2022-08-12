@@ -6,132 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Html+css</title>
-    <!-- example css inside html -->
-    <style> 
-        .testSpan{
-            display: flex;
-            color: blue;
-            background-color: aquamarine;
-            width: 100px;
-            height: 100px;
-            border: 1px solid black;
-            text-align: center;
-            align-items: center;
 
-        }
-    </style>
 </head>
 <body>
-    <!-- inline and embedded style-->
-    <div class="exemple">
-        <div class="headerExemple">Inline style and embedded style:</div>  
-        <div class="inlineAndEmbedded">
-            <!-- inline style-->
-            <div style="background-color: aqua;
-                        width: 100px; 
-                        height: 100px; 
-                        float: left;
-                        margin-right: 10px;"> Hi </div>
-
-            <!-- example css inside html -->
-            <div class="testSpan">My name Giovani Georgio</div>
-        </div>
-    </div>
-
-    <!-- selectors css-->
-    <div class="exemple">
-        <div class="headerExemple">Ease exemple selector:</div>  
-        <div class="easeExempleSelector">
-            <p>Test paragraph</p>
-            <h3 class="styleForHeading">Test heading</h3>
-            <div id="styleForDiv">Test div</div>
-        </div>
-    </div>
-
-    <!-- вложенные селекторы-->
-    <div class="exemple">
-        <div class="headerExemple">nested selectors:</div>  
-            <div class="nestedSelectors">
-                <h3>heading1</h2>
-                <h3>heading2</h2>
-                <h3>heading3</h2>
-                <span>nested2</span>
-            </div>
-    </div>
-
-    <!--second exeple-->
-    <div class="exemple">
-        <div class="headerExemple">nested selectors:</div>  
-        <div class="secondExemple">
-            <a href="#">Test ref</a>
-            <div class="testDiv">Test div</div>
-            <h3>Test heading</h3>
-            <a href="#">second test ref</a>
-        </div>
-    </div>
-
-    <!-- musliselector-->
-    <div class="exemple">
-        <div class="headerExemple">musliselector:</div>  
-        <div class="musliselector">
-            <div class="italic">Text italic</div>
-            <div class="bold">Text bold</div>
-            <div class="italic bold">Text italic and bold</div>
-        </div>
-    </div>
-                                
-    <!-- childSelect-->
-    <div class="exemple">
-        <div class="headerExemple">child select:</div>  
-<!--------------------------------------------------------------------------->    
-        <style>
-            .childSelector .firstList li{
-                color:red;
-            }
-        </style>
-        <!-- all <li> red, because we choose all <li> in <ul>-->
-        <div class="childSelector">
-            <ul class="firstList">First list
-                <li>test 1</li>
-                <li>test 2</li>
-                <li>test 3</li>
-            </ul>
-    
-<!--------------------------------------------------------------------------->
-        <style>
-            .childSelector .secondList li{
-                color:red;
-            }
-        </style>
-        <!-- all <li> red, because we choose all <li> in <ul>, independet of perents-->
-            <ul class="secondList">Second list
-                <li>test 1</li>
-                <div><li>test 2</li><div>
-                <li>test 3</li>
-            </ul>
-<!--------------------------------------------------------------------------->
-        <style>       
-            .childSelector .nextList > li{
-                color:red;
-            }
-        </style>
-        <!-- choose only first child! -->
-            <ul class="nextList">Next list
-                <li>test 1</li>
-                <!-- this <li> has no styles because it is not the first child -->
-                <span><li>test 1</li></span> 
-                <li>test 3</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- attribute select -->
-    <div class="exemple">
-        <div class="headerExemple">child select:</div>  
-        <div class="atributSelect">
-            <button type="button"> Push me</button>
-            <input type="text" placeholder="satisfaction">
-        </div>
-    </div>
+  <h1>Html+css</h1>
+  <ul>
+    <li><a href="./selector/selector.html">Secetrors CSS</a></li>
+  </ul>
+  
 </body>
 </html>

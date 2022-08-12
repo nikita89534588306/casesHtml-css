@@ -1,0 +1,91 @@
+/* selectors */
+.headerExemple{
+    margin: 5px 0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* tag selestor:*/
+.inlineAndEmbedded, 
+.easeExempleSelector,
+.nestedSelectors,
+.secondExemple,
+.musliselector,
+.childSelector,
+.atributSelect{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 60px 10px 60px;
+
+
+}
+.exemple{
+    border: 1px solid black; 
+    margin: 10px;
+}
+
+.exemple .headerExemple{
+    text-align: center;
+}
+/* ease exemples selector */
+    p{
+        color: red;
+    }
+
+    /* id class */
+    .styleForHeading{
+        color: green;
+    }
+
+    /* id selecrot */
+    #styleForDiv{
+        color: blueviolet;
+    }
+
+/* exemples nested selectors */
+    /*get all items in .nestedSelectors*/
+    .nestedSelectors * {
+        border: 1px solid greenyellow;
+    }
+
+    /* get all <h3> in .nestedSelectors*/
+    .nestedSelectors h3{
+        background-color: blanchedalmond;
+    }
+
+/* new syntax example */ 
+    /*choose all ref in .secondExemple ... */   .secondExemple a,
+    /*and choose .testDiv in .secondExemple */  .secondExemple .testDiv{
+        color: yellowgreen;
+    }
+
+/* musliselector */
+    /*choose .bold in .hardSelector */ 
+    .musliselector .bold{
+        font-weight: bold;
+    }
+    /*choose .italic in .hardSelector */ 
+    .musliselector .italic{
+        font-style: italic;
+    }
+    /*choose tag witn style .bold AND .italic */ 
+    .musliselector .bold.italic{
+        text-decoration:underline;
+        color: red;
+    }
+
+/* attribute select */
+    /*select all buttons that have the attribute - type*/
+    button[type]{
+        color:orange;
+        background-color: black;
+        border: 1px solid red;
+    }
+
+    /*select all buttons that have a content attribute - placeholder, value - satisfaction*/
+    input[placeholder="satisfaction"]{
+        background-color: deeppink;
+    }
+
+
+
