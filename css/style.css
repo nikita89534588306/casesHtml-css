@@ -3,7 +3,8 @@
     .easeExempleSelector,
     .nestedSelectors,
     .secondExemple,
-    .musliselector{
+    .musliselector,
+    .childSelector{
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -58,3 +59,8 @@
             text-decoration:underline;
             color: red;
         }
+
+        /* childSelec */
+
+
+

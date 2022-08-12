@@ -61,5 +61,49 @@
         <div class="bold">Text bold</div>
         <div class="italic bold">Text italic and bold</div>
     </div>
+
+                            <!-- childSelect-->
+<!--------------------------------------------------------------------------->
+    
+    <style>
+        .childSelector .firstList li{
+            color:red;
+        }
+    </style>
+    <!-- all <li> red, because we choose all <li> in <ul>-->
+    <div class="childSelector">
+        <ul class="firstList">First list
+            <li>test 1</li>
+            <li>test 2</li>
+            <li>test 3</li>
+        </ul>
+    
+<!--------------------------------------------------------------------------->
+    <style>
+        .childSelector .secondList li{
+            color:red;
+        }
+    </style>
+    <!-- all <li> red, because we choose all <li> in <ul>, independet of perents-->
+        <ul class="secondList">Second list
+            <li>test 1</li>
+            <div><li>test 2</li><div>
+            <li>test 3</li>
+        </ul>
+<!--------------------------------------------------------------------------->
+    <style>       
+        .childSelector .nextList > li{
+            color:red;
+        }
+    </style>
+    <!-- choose only first child! -->
+        <ul class="nextList">Next list
+            <li>test 1</li>
+            <!-- this <li> has no styles because it is not the first child -->
+            <span><li>test 1</li></span> 
+            <li>test 3</li>
+        </ul>
+    </div>
+
 </body>
 </html>
