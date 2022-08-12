@@ -2,6 +2,7 @@
 
 .exemple{
     border: 1px solid black;
+    margin: 10px 10px;
 }
 .header{
     font-size: 20px;
@@ -9,7 +10,12 @@
 }
 
 /* exemple fist-of-type and last-of-type */
-    #block *{
+    .block *,
+    .block2 *{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         border: 1px solid black;
         display: inline-block;
         margin: 15px;
@@ -17,33 +23,40 @@
         font-size: 14px;
     }
 
-    /* find first element <p> in #block*/
-    #block p:first-of-type{
+    /* find first element <p> in .block*/
+    .block p:first-of-type{
         color: blue;
     }
 
-    /* find last element <p> in #block*/
-    #block p:last-of-type{
+    /* find last element <p> in .block*/
+    .block p:last-of-type{
         color: red;
     }
 
-    /* find first element <span> in #block*/
-        #block span:last-of-type{
+    /* find first element <span> in .block*/
+        .block span:last-of-type{
         color:blueviolet;
     }
 
-    /* find last element <span> in #block*/
-    #block span:first-of-type{
+    /* find last element <span> in .block*/
+    .block span:first-of-type{
         color:aqua;
     }
 
 /* exemple first-child */
     /* find first child */
-    #block :first-child{
+    .block :first-child{
         background-color:beige;
     } 
     /* find last child */
-    #block :last-child{
+    .block :last-child{
         background-color:burlywood;
     } 
     
+/* psevdoclasses link */
+    .textLink:link{color:red}       /*изначальное состояние*/
+    .textLink:visited{color:green}  /*когда перешли по ссылке*/
+
+/* active and hover*/
+    .testButton:active{background-color: yellow;}
+    .testButton:hover{background-color: aquamarine;}
