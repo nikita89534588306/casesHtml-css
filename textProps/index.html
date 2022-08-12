@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <style>
+        .exemple {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        .exemple h3{
+            text-align: center;
+        }
+        .exemple div{
+            border: 1px solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Test1</h3>
+    <style>
+        .test{
+            color: rgba(18, 179, 71, 0.5); /*color text*/
+            font-weight: 700; /*толщина шрифта*/
+            font-style: normal /*italic - курсив*/;
+            font-size: 20px; /*размер шрифта*/
+            font-family: 'Arial', sans-serif; /*подключение шрифта*/
+            letter-spacing: 2px; /*расстояние между буквами в слове*/
+            line-height: 150%; /*расстояние между строками*/
+
+            /*специальные настройки текста*/
+            text-transform: none /* без изменений */;
+                            /* lowercase - все строчные*/
+                            /* uppercase - все заглавные */ 
+
+            text-indent: 40px; /* отступ для первой строки*/
+            word-spacing: 25px; /* отступ между словами */
+        }
+
+        .testRef{
+            text-decoration: none; /*отключение нижнего подчеркивания для ссылок*/
+            cursor: pointer; /*тип курсора при наведении*/
+        }
+
+        .underline{
+            /*декорация текста например подчеркивание*/
+            text-decoration: underline;
+            /*цвет нижнего подчеркивания черный */ 
+            text-decoration-color: rgb(204, 107, 42);
+            color: blueviolet;
+        } 
+
+    </style>
+    
+    <div class="test">Lorem <span class="underline">ipsum</span> dolor sit <a class="testRef"href="">amet</a> consectetur adipisicing elit. Libero, alias. Dolor tenetur, fugit aperiam veritatis totam praesentium tempora necessitatibus quis maiores. Ipsam iusto error at exercitationem omnis, ducimus nesciunt incidunt.</div>
+
+    <!-- позиционирование текста -->
+    <style>
+        .exemple .txtLeft{text-align: left;}            /*тест слева*/
+        .exemple .txtRight{text-align: right;}          /*тест справа*/
+        .exemple .txtCenter{text-align: center;}        /*тест по центру*/
+        .exemple .justify{text-align: justify;}         /*тест растянут*/
+        
+    </style>
+    <div class="exemple">
+        <h3>Txt position</h3>
+        <div class="txtLeft">jksdafds</div>
+        <div class="txtRight">jksdafds</div>
+        <div class="txtCenter">sdafdsf</div>
+        <div class="justify">sdfasdf dfsg  dsfg  gdfsg dsf gdf fdsgdsgsdfg</div>
+    </div>
+</body>
+</html>
