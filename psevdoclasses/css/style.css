@@ -60,3 +60,7 @@
 /* active and hover*/
     .testButton:active{background-color: yellow;}
     .testButton:hover{background-color: aquamarine;}
+
+/* exemple not*/
+    .led {background-color: gray;}
+    .led:not(.diseble){background-color: aqua;}
