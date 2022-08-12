@@ -37,3 +37,9 @@
             background-color: blanchedalmond;
         }
 
+    /* new syntax example */ 
+        /*choose all ref in .secondExemple ... */   .secondExemple a,
+        /*and choose .testDiv in .secondExemple */  .secondExemple .testDiv{
+            color: yellowgreen;
+        }
+
