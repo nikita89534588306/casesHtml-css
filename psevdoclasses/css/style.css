@@ -64,3 +64,12 @@
 /* exemple not*/
     .led {background-color: gray;}
     .led:not(.diseble){background-color: aqua;}
+
+/* enabled disabled */
+    input:disabled{
+        background-color: silver;
+    }
+
+    input:enabled{
+        background-color: gold;
+    }
