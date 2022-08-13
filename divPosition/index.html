@@ -7,6 +7,116 @@
     <title>div position</title>
 </head>
 <body>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <style>
+        .exemple{border: 1px solid black; padding: 10px; margin-bottom: 10px;}
+        .block{
+            width: 100px;
+            height: 100px;
+            background-color: silver;
+            margin-bottom: 10px;
+            
+        }
+
+        .imgAndText{
+            background-color: rgb(126, 126, 126);
+            width: 400px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .img{
+            width: 230px;
+            margin-right: 10px;
+        }
+
+        body{
+            height: 3000px;
+        }
+
+    </style>
+
+    <div class="exemple ">
+        <!--пример текста и картинки без обтекания по левому кряю -->
+        <h2 style="text-align:center">Exemple: float</h2>
+        <span style="background-color:yellow; font-size: 20px;">!!!Если текст обтекает края картинки не ровно то нужно побирать размер шрифта или картинки!!!</span>
+        <div style="font-size: 25px;">No float:</div>
+        <div class="imgAndText">
+            <img class="img" src="https://basik.ru/images/landscapes_walls/08_landscape.jpg" alt="">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sed veritatis deserunt itaque aliqu amet, consectetur adipisicing elit. Non sed veritatis deserunt itaque aliqu am? Itaque corrupti architecto, animi minus ea commodi beatae eum laboriosam nesciunt reiciendis dolorem eos, in cumque?</span>
+        </div>
+
+        <!--с обтеканием-->
+        <div style="font-size: 25px;">float:</div>
+        <div class="imgAndText">
+            <!-- обтекание добавляем к картинке -->
+            <img class="img" style="float: left;"src="https://basik.ru/images/landscapes_walls/08_landscape.jpg" alt="">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sed veritatis deserunt itaque aliqu amet, consectetur adipisicing elit. Non sed veritatis deserunt itaque aliqu am? Itaque corrupti architecto, animi minus ea commodi beatae eum laboriosam nesciunt reiciendis dolorem eos, in cumque?</span>
+        </div>
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+     <!--- блок с position: fixed-->
+     <div class="fixed"style="width: 100%; height: 50px; background-color: red;">Если при моменте загрузки данный блок находится за приделами окна то необходимо менять координаты иначе он там и останется</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <style>
+    .fixed{ position: fixed;width: 100%; height: 50px; background-color: red;}
+    </style>
+
+    <!--- блок с position: fixed-->
+    <div class="fixed">Если при моменте загрузки данный блок находится за приделами окна то необходимо менять координаты иначе он там и останется</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <style>
+        .window{ width: 300px; height: 200px; background-color: gray; margin: 100px;}
+        .obj{width: 50px; height: 50px;background-color: yellow;}
+        .fixed{ position: fixed;}
+    </style>
+
+    <!--- блок с position: relative-->
+    <div class="window ">
+        <!-- меняет коотдинаты относительно рожительского объекта-->
+        <div class="obj " style="position: relative; top:-20px; left:-20px"></div>
+    </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<style>
+    .sticky{ position: sticky; top:20px;width: 100%; height: 50px; background-color:darkgray;}
+    </style>
     
+    <!--- блок с position: sticky-->
+    <div class="sticky">Данный блок фиксируется когда при скролле значение координат блока в окне браузера совпадает со значение указанном в стиле</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
+<style>
+    .divParent{ width: 300px; height: 200px; background-color: gray; margin: 100px;}
+    .child{width: 50px; height: 50px;}
+    .fixed{ position: fixed;}
+</style>
+
+<!--- блок с position: relative-->
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="exemple" style="margin-top:10px">
+    <!--пример текста и картинки без обтекания по левому кряю -->
+    <h2 style="text-align:center">Exemple: relative and absolute</h2>
+    <span style="background-color:yellow; font-size: 20px;">!!!Родительский блок имеет свойство relative а дочерний absolute. Позиционирование дочернего блока идет от координаты родительского блока!!!</span>
+    <div class="divParent" style="position: relative">
+        <!-- меняет коотдинаты относительно рожительского объекта-->
+        <div class="child " style="position: absolute; top:-20px; left:-20px; background-color: red;"></div>
+        <div class="child " style="position: absolute; top:-20px; right: -20px; background-color: green;"></div>
+        <div class="child " style="position: absolute; bottom:-20px; left:-20px; background-color: yellow;"></div>
+        <div class="child " style="position: absolute; bottom:-20px; right:-20px; background-color: blue;"></div>
+    </div> 
+</div>
 </body>
 </html>
