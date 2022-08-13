@@ -8,6 +8,108 @@
     <title>Document</title>
 </head>
 <body>
-    <div>Hi</div>
+    <style>
+
+        .exemple{
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+
+        .block{
+            width: 200px; /* ширина блока */
+            height: 100px;
+            background-color: aquamarine; /* цвет блока */
+            border: 5px dotted black; /* обвотка с точками */
+            border-radius: 15% 7%; /* скругляем углы */
+            padding: 10px; /*отступ для текста */
+            margin: 10px;
+        }
+
+
+    </style>
+    <div class="exemple">
+        <h2 style="text-align: center;">Exemple: Content in block</h2><hr> 
+        <div style="display: flex">
+            <!-- текст вылазиет т.к контент не помещается в ограничение по высоте -->
+            <div class="block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita nulla sed pariatur. Minus ut, labore magni cupiditate molestias doloremque suscipit repudiandae assumenda nesciunt quibusdam laudantium dolorem corrupti perferendis non praesentium ad aspernatur qui natus odio.</div>
+            
+            <!--перезипишем свойство height и увидим что высота подстроилась под размеры контента -->
+            <div class="block" style="height: auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita nulla sed pariatur. Minus ut, labore magni cupiditate molestias doloremque suscipit repudiandae assumenda nesciunt quibusdam laudantium dolorem corrupti perferendis non praesentium ad aspernatur qui natus odio.</div>
+
+            <!-- оставим высоту 100px и зададим overflow: auto -->
+            <!-- overflow: auto скролит контент если это неоьбходимо-->
+            <div class="block" style="overflow: auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illum labore reprehenderit porro distinctio, enim atque delectus. Cumque libero quia suscipit sed nam ratione aliquam facere, nobis incidunt! Officia, modi suscipit? Fugit neque dolores nam.</div>
+            
+            <!-- скрывает контент который выходит за приделы блока-->
+            <div class="block" style="overflow: hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita nulla sed pariatur. Minus ut, labore magni cupiditate molestias doloremque suscipit repudiandae assumenda nesciunt quibusdam laudantium dolorem corrupti perferendis non praesentium ad aspernatur qui natus odio.</div>
+        </div>
+    </div>
+
+    <style>
+        
+        textarea{
+            /*зададим ширину и высоту текстового поля*/
+            width: 100px; height: 100px;
+            /*скажем как может изменяться высота и ширина тексовото блока */
+            min-width: 70px; min-height: 100px;
+            max-width: 300px; max-height: 500px;
+        }
+    </style>
+        <div class="exemple">
+            <h2 style="text-align: center;">Exemple: max-width and max-height</h1><hr> 
+                <textarea ></textarea>
+        </div>
+    
+    <div class="exemple">
+        <h2 style="text-align: center;">Exemple: properties display</h2><hr> 
+            <!-- display: none; не отрисовывает блок СОВСЕМ-->
+            <div style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis?</div>
+
+            <!-- display: inline-block говорит о том что следующий элемент не должен переноситься на другую строку -->
+            <div style="display: inline-block; background-color: burlywood;">sicing elit. Dolore, ex.</div>
+        
+            <div style="display: inline-block; background-color: red;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qu</div>
+    </div>
+
+    <style>
+        .divImg{
+            width: 100%; 
+            height: 300px; 
+            background-image: url(https://mobimg.b-cdn.net/v3/fetch/f9/f9f2de5608f00f96a18f470547e52bef.jpeg?w=1470&r=0.5625);
+            margin-bottom: 10px;
+        }
+
+        .scrolImg{
+            background-position: center; /*подгонка изображения по центру*/
+            background-size: 190%; /* масштабируем размер изображения*/
+            background-repeat: no-repeat; /*если изображение меньше чем координаты не повторять*/
+            background-attachment: fixed;   /*сделать изображение задним фоном*/
+
+            /*эти стили накладывают фильтр на изображение */
+            background-blend-mode: multiply;
+            background-color: rgb(66, 63, 63);
+
+
+            /* можно расположить все свойства background в одну строку 
+                background: center 190% no-repeat fixed;
+            */
+        }
+    </style>
+    <div class="exemple">
+        <h2 style="text-align: center;">Exemple: block image</h2><hr> 
+        <!-- картинка без применения масштабирования-->
+        <div class="divImg" ></div>
+
+        <!-- красивое окошко для изображение на фоне -->
+        <div class="divImg scrolImg" ></div>
+
+        <!-- картинка с отобрадается по центру-->
+        <div class="divImg" style="background-position: center;"></div> 
+        <!-- картинка занимает 100% блока-->
+        <div class="divImg" style="background-size: 100%"></div>
+        <!-- автоматический подбор размнера изображения-->
+        <div class="divImg" style="background-size: cover"></div>
+    </div>
 </body>
 </html>
