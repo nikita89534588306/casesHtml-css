@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other exemples</title>
+    <style>
+        .exemple {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            margin-bottom: 10px;
+            
+        }
+        .exemple h3{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<!---------------------------Слои CSS-------------------------------------------------------->
+    <style>
+        .firstBlock{
+            width: 100px;
+            height: 100px;
+            /*для того что бы слои работали правильно 
+                нужно указать одинаковый тип позиционирования*/
+            position: relative;
+            top: 30px; /*сделаем так что бы блоки наезжали друг на друга*/
+            
+            /*зададим индекс слоя. чем меньше индекс тем ниже слой*/
+            z-index: 1;
+
+            background-color: gray;
+        }
+
+        .secondBlock{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /*для того что бы слои работали правильно 
+                нужно указать одинаковый тип позиционирования*/
+            position: relative;
+            left: 30px; /*сделаем так что бы блоки наезжали друг на друга*/
+            
+            /*зададим индекс слоя. чем меньше индекс тем ниже слой*/
+            z-index: 2;
+        }
+
+        .nextBlock{
+            width: 120px;
+            height: 100px;
+            background-color: yellow;
+        
+            /*для того что бы слои работали правильно 
+                нужно указать одинаковый тип позиционирования*/
+            position: relative;
+            top: -120px; /*сделаем так что бы блоки наезжали друг на друга*/
+            left: 10px;
+
+            /*зададим индекс слоя. чем меньше индекс тем ниже слой*/
+            z-index: 0;
+        }
+    </style>
+    <div class="exemple">
+        <h3>Слои CSS</h3>
+        <div class="firstBlock"></div>
+        <div class="secondBlock" ></div>
+        <div class="nextBlock" ></div>
+    </div>
+
+<!---------------------------------------------------------------------------------------------->
+
+
+<!-----------------------------------Шрифты---------------------------------------------------->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&family=M+PLUS+1p:wght@300;800&display=swap');
+    .textFont{
+        font-family: 'DynaPuff', cursive;
+    }
+</style>
+<div class="exemple">
+    <h3>Шрифты</h3>
+    <div class="textFont"> My name is Giovani Georgio</div>
+    <div class="textFont" style="font-weight: 700;"> My name is Giovani Georgio</div>
+</div>
+<!---------------------------------------------------------------------------------------------->
+</body>
+</html>
