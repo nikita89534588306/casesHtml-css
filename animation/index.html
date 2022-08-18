@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .conteiner{
+            border: 1px solid black;
+            width: 600px;
+        }
+
+        .block{
+            width: 100px;
+            height: 100px;
+            background: silver;
+            position: relative;
+
+            /*подключение анимации*/
+            animation-name: red, run;
+            /*длительность анимации*/
+            animation-duration: 3s, 6s;
+
+            animation-timing-function: linear;
+
+            /*безконечная анимация*/
+            animation-iteration-count: infinite ;
+            /*проигрывает от начала до конца и обратно*/
+            animation-direction: alternate;
+        }
+
+        .conteiner:hover .block{
+           animation-play-state:running,paused;
+        }
+
+        @keyframes run{
+            0%{left:0px;}
+            50%{border-radius: 50px}
+            100%{ left: 500px;}
+        }
+
+        @keyframes red{
+            from{background: silver;}
+            to{background-color: red;}
+        }
+    </style>
+    <div class="conteiner"><div class="block"></div></div>
+</body>
+</html>
