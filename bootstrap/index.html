@@ -7,7 +7,62 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Document</title>
 </head>
+<style>
+    div{
+        border: 1px solid black;
+    }
+</style>
 <body>
-    Hi
+    <!-- conteiner(с отступами по бокам)
+        conteiner-fluid(без отступов)-->
+    <div class="container">
+        <!-- row(ряд или строка) внутри ряда можно создать до 12 столбцов-->
+        <div class="row">
+            <!-- col(столбец сетки)-->
+            <div class="col">kiss</div>
+            <div class="col">my</div>
+            <div class="col">ass</div>
+        </div>
+
+<!-------------------------------------------------------->
+        <div class="row">
+            <!-- столбцs с указанием размера -->
+            <!-- если указывать размер то лучше ко всем ячейкам для ясности-->
+
+            <!--столбец занимает 6 ячеек из 12 возможных в строке сетки бутстрап-->
+            <div class="col-6">kiss</div> 
+            <!--3 ячейки-->
+            <div class="col-3">my</div>
+            <!--и оставшиеся 3 ячейки-->
+            <div class="col-3">ass</div>
+        </div>
+<!-------------------------------------------------------->
+        <div class="row">
+            <!--col-xl-6(при ширине 1200px столбец занимает 6 ячейки)
+                col-md-8(при 768px столбец занимает 8 ячеек)
+                col-12(во всех отстальных случаях)
+            -->
+            <div class="col-12 col-xl-6 col-md-8">Адаптивность</div>
+            <!--col-xl-4(при ширине 1200px столбец занимает 4 ячейки)
+                col-md-8(при 768px столбец занимает 8 ячеек)
+                col-12(во всех отстальных случаях)
+            -->
+            <div class="col-12 col-xl-4 col-md-2">Адаптивность</div>
+            <div class="col-12 col-xl-2 col-md-2">Адаптивность</div>
+        </div>
+<!------------------------------------------------------------------->
+        <div class="row">
+            <div class="col-6">Обычный столбец</div>
+            <!-- можно записывать offset-md-3 -->
+            <div class="col-1 offset-3 ">Смещен на 3 ячейки</div>
+        </div>
+
+<!------------------------------------------------------------------>
+        <!--bootstrap flexBox-->    
+        <div class="row justify-content-between align-items-center">
+            <div class="col-6 text-center ">bootstrap flexBox</div>
+            <div class="col-1">sdfsdd sfsdf sdf d sfasd d sfdsf sdfasd  sd fasd</div>
+            <div class="col-1 align-self-start">asdas dasdas</div>  
+        </div>
 </body>
 </html>
